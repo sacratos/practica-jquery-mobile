@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,62 +6,131 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <style type="text/css" media="screen">
+#input{
+    width: 20%;
+    left: 50%;
+}
+            
+        </style>
     </head>
     <body>
  
         <!-- Página 1-->
         <div data-role="page" id="main">
-             <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-          
             <div data-role="header">
                 <h1>
-                    Login
+                    Página 1
                 </h1>
             </div>
             <div data-role="content">
                 <h1>
-                    Practica jQueryMobile
+                    Login
                 </h1>
                 <form method="get" accept-charset="utf-8">
                   <label>Usuario:</label><input type="text" id="usuario" name="usuario">
                   <label>Password:</label><input type="password" id="password" name="password">
-                  <a data-role="button" type="submit" href="#dialog1">Entrar</a>
+                  </br>
+                  </br>
+                  <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Entrar</a>
                 </form>
-                <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">informacion</a>
+                
             </div>
             <div data-role="footer">
                 <h4>
-                    ingresar
+                    una aplicacion para los profesores del CPIFP Los Enlaces
                 </h4>
             </div>
         </div>
         <!-- Fin página 1 -->
  
-        <!-- Página 2 -->
+        <!-- Página 2-->
+        <div data-role="page" id="page2" data-add-back-btn=”true”>
+            <div data-role="header">
+                <h1>
+
+                </h1>
+            </div>
+            <div data-role="content">
+                <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="formGroupInputSmall">Entrada del alumno</label>
+                <div id="input" class="col-sm-10">
+                  <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Entrada">
+                </div>
+              </div>
+            </div>
+            <div data-role="footer">
+                <h4>
+                    Notas
+                </h4>
+            </div>
+        </div>
+        <!-- Fin página 2 -->
+                    <script>
+                    $("#select-choice-2").val("");
+                    </script>
+ 
+        <!-- Página 3 -->
         <div data-role="page" id="dialog1">
  
             <div data-role="header">
                 <h1>
-                   Información
+                    Tercera página
                 </h1>
             </div>
             <div data-role="content">
-                <h1> 
-                    Una aplicacion para los profesores del CPIFP Los Enlaces
-                </h1>
+                <form>
+                    <div data-role="fieldcontain">
+                        <label for="select-choice-mini" class="select">CURSO:</label>
+                        <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                            <option value="1">1º</option>
+                            <option value="2">2º</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                    <label for="select-native-4">Ciclo:</label>
+                    <select name="select-native-4" id="select-native-4">
+                        <option>...</option>
+                        <optgroup label="Grado medio">
+                            <option value="1">DAW</option>
+                            <option value="2">DAM</option>
+                            <option value="3">Comercio y marketing</option>
+                            <option value="4">Imagen y sonido</option>
+                        </optgroup>
+                        <optgroup label="Grado superior">
+                            <option value="5">DAW</option>
+                            <option value="6">DAM</option>
+                            <option value="7">Comercio y marketing</option>
+                            <option value="8">Imagen y sonido</option>
+                        </optgroup>
+                    </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="select-choice-1" class="select">Alumno:</label>
+                        <select name="select-choice-1" id="select-choice-2">
+                            <option value="1">Juan Zumeta</option>
+                            <option value="2">Miguel Funpe</option>
+                            <option value="3">Adrea Andorra</option>
+                            <option value="4">Marta Morte</option>
+                            <option value="5">Pepe Gil</option>
+                            <option value="6">Sonia Sanz</option>
+                        </select>
+                    </div>
+                
+                <a id="pag2-3" data-role="button" href="#page2">Seleccionar</a>
+                </form>
             </div>
             <div data-role="footer">
                 <h4>
-                    Pie de la ventana modal
+                    alumno y curso
                 </h4>
             </div>
         </div>
         <!-- Fin página 3 -->
-            <div data-role="footer" >
-                <p>Notas CPIFP Los Enlaces </p>
-            </div>
-        </div>
     </body>
+    <script>
+    $("a").on("click", "#pag2-3", function(){
+        var alumno=$(this).val();
+    });
+    </script>
 </html>
