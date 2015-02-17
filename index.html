@@ -23,7 +23,7 @@
     </head>
     <body>
  
-        <!-- Página 1-->
+        <!-- Página 1 login-->
         <div data-role="page" id="main">
             <div data-role="header">
                 <h1>
@@ -50,15 +50,15 @@
                 </h4>
             </div>
         </div>
-        <!-- Fin página 1 -->
+        <!-- Fin página LOGIN -->
  
-        <!-- Página 2-->
+        <!-- Página 2 FORMULARIO 1-->
         <div data-role="page" id="page2" data-add-back-btn=”true”>
             <div data-role="header" class="ui-content">
                 <div id="botones">
-                    <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 1</a>
-                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 2</a>
-                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 3</a>
+                    <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline ui-disabled">Formulario 1</a>
+                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="slide" class="ui-btn-inline">Formulario 2</a>
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="slide" class="ui-btn-inline">Formulario 3</a>
                 </div>
                 
             </div>
@@ -91,15 +91,15 @@
                             <legend>
                                 Indumentaria:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" checked="true" />
                             <label for="radio-choice-4">
                                 Ok
                             </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-5" value="choice-5" />
                             <label for="radio-choice-5">
                                 Regular
                             </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-6" value="choice-6" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-6" value="choice-6" />
                             <label for="radio-choice-6">
                                 Mal
                             </label>
@@ -197,7 +197,7 @@
                         </fieldset>
                     </div>
                     
-                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                    <a data-role="button" href="#page3" data-rel="dialog" data-transition="pop">Siguiente</a>
                 </form>
               </div>
             </div>
@@ -209,152 +209,90 @@
         </div>
         <!-- Fin página 2 -->
 
-        <!-- Página 4-->
+        <!-- Página 4 FORMULARIO 2-->
         <div data-role="page" id="page3" data-add-back-btn=”true”>
             <div data-role="header" class="ui-content">
                 <div id="botones">
-                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 2</a>
+                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline ui-disabled">Formulario 2</a>
                     <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 1</a>
-                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 3</a>
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="slide" class="ui-btn-inline">Formulario 3</a>
                 </div>
                 
             </div>
             <div data-role="content">
                 <form action="#" method="get">
                     <h2>
-                        Formulario de anotaciones:
+                        Presentacion:
                     </h2>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
-                                Entrada del alumno:
+                                Claridad de presentacion:
                             </legend>
                             <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
                             <label for="radio-choice-1">
-                                Puntual
+                                Habla con seguridad
                             </label>
                             <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
                             <label for="radio-choice-2">
-                                Retraso
+                                Tiene dudas, inseguridad
                             </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
-                            <label for="radio-choice-3">
-                                Falta 
-                            </label>
+                            
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
-                                Indumentaria:
+                                Tipo de Presentacion:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" checked="true" />
                             <label for="radio-choice-4">
-                                Ok
+                                PowerPoint, Prezy, otros...
                             </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-5" value="choice-5" />
                             <label for="radio-choice-5">
-                                Regular
+                                Office Word.
                             </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-6" value="choice-6" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-6" value="choice-6" />
                             <label for="radio-choice-6">
-                                Mal
+                                Oral, proyector.
                             </label>
                         </fieldset>
                     </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                 Introduccion/Idea proyecto:
-                            </legend>
-                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
-                            <label for="checkbox-6">
-                                Muy buena idea!
-                            </label>
-                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
-                            <label for="checkbox-7">
-                                Atractivo
-                            </label>
-                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
-                            <label for="checkbox-8">
-                                Claro y conciso
-                            </label>
-                            <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom"  />
-                            <label for="checkbox-9">
-                                Se entiende poco
-                            </label>
-                              <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
-                            <label for="checkbox-10">
-                                Nada claro
-                            </label>
-                        </fieldset>
-                    </div>
-                   <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                Desarrollo del proyecto:
-                            </legend>
-                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
-                            <label for="radio-choice-a">
-                                Claridad de los objetivos
-                            </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="off" />
-                            <label for="radio-choice-b">
-                                Exposicion emocionante
-                            </label>
-                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
-                            <label for="radio-choice-c">
-                                Exposicion muy densa
-                            </label>
-                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
-                            <label for="radio-choice-d">
-                                Poco trabajado
-                            </label>
-                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
-                            <label for="radio-choice-e">
-                                Nada claro
-                            </label>
-                        </fieldset>
-                    </div>
-
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
-                                Nota general de exposicion:
+                                Redaccion y claridad de texto:
                             </legend>
-                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                            <input type="radio" name="radio-choice-3" id="radio-choice-7" value="choice-7" checked="true" />
+                            <label for="radio-choice-7">
+                                Bien redactado, completo
+                            </label>
+                            <input type="radio" name="radio-choice-3" id="radio-choice-8" value="choice-8" />
+                            <label for="radio-choice-8">
+                                Se entiende mal, falta coherencia.
+                            </label>
+                            
                         </fieldset>
                     </div>
-
-                     <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
                             <legend>
-                                Introduccion/Idea proyecto:
+                                Organizacion del contenido:
                             </legend>
-                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
-                            <label for="radio-choice-a">
-                                Muy buena idea!
+                            <input type="radio" name="radio-choice-4" id="radio-choice-9" value="choice-7" checked="true" />
+                            <label for="radio-choice-7">
+                                Bien redactado, completo
                             </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="on" checked="checked" />
-                            <label for="radio-choice-b">
-                                Atractivo
+                            <input type="radio" name="radio-choice-4" id="radio-choice-10" value="choice-8" />
+                            <label for="radio-choice-8">
+                                Se entiende mal, falta coherencia.
                             </label>
-                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
-                            <label for="radio-choice-c">
-                                Claro y conciso
-                            </label>
-                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
-                            <label for="radio-choice-d">
-                                Se entiende poco
-                            </label>
-                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
-                            <label for="radio-choice-e">
-                                Nada claro
-                            </label>
+                            
                         </fieldset>
                     </div>
                     
-                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                    <a data-role="button" href="#page4" data-rel="dialog" data-transition="pop">Siguiente</a>
                 </form>
               </div>
             </div>
@@ -366,11 +304,11 @@
         </div>
         <!-- Fin página 4 -->
 
-        <!-- Página 5-->
+        <!-- Página 5 FORMULARIO 3-->
         <div data-role="page" id="page4" data-add-back-btn=”true”>
             <div data-role="header" class="ui-content">
                 <div id="botones">
-                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 3</a>
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline ui-disabled">Formulario 3</a>
                     <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 1</a>
                     <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 2</a>
                 </div>
@@ -483,7 +421,7 @@
                         </fieldset>
                     </div>
                     
-                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                    <a data-role="button" href="#page5" data-rel="dialog" data-transition="pop">Ir a Notas</a>
                 </form>
               </div>
             </div>
@@ -495,7 +433,61 @@
         </div>
         <!-- Fin página 5 -->
                     
- 
+ <!-- Página NOTAS-->
+        <div data-role="page" id="page5" data-add-back-btn=”true”>
+            <div data-role="header">
+               <h1>Nota Final de la exposicion</h1>
+                
+            </div>
+            <div data-role="content">
+                <form action="#" method="get">
+                    
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Contenido del proyecto:
+                            </legend>
+                            <label>
+                                Nota sobre 6.5 pts, 65% de la nota
+                            </label>
+                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="6.5" data-highlight="true">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Presentacion del proyecto:
+                            </legend>
+                            <label>
+                                Nota sobre 1 pt, 10% de la nota
+                            </label>
+                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="1" data-highlight="true">
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Expresion oral:
+                            </legend>
+                            <label for="radio-choice-a">
+                                Nota sobre 2.5 pts, 25% de la nota
+                            </label>
+                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="2.5" data-highlight="true">
+                        </fieldset>
+                    </div>
+                    <input type="text" name="notafinal" value="">
+                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                </form>
+              </div>
+            </div>
+            <div data-role="footer">
+                <h4>
+                    Calificacion Oral de los alumnos
+                </h4>
+            </div>
+        </div>
+        <!-- Fin página NOTAS -->
+
         <!-- Página 3 -->
         <div data-role="page" id="dialog1">
  
