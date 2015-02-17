@@ -9,7 +9,7 @@ a:link { color:purple; }
   color: green;
   text-align: center;
   position: relative;
-  
+
 }
 /* Stack the two content containers */
 .main,
@@ -20,6 +20,7 @@ a:link { color:purple; }
 @media all and (min-width: 36em){
 	.main { float: left; width:60%; }
 	.sidebar { float: left; width:40%; }
+  #botones{width: 10%;}
 }
  
 /* Second breakpoint at 800px */
@@ -27,7 +28,7 @@ a:link { color:purple; }
 @media all and (min-width: 50em){
 	.main { width:70%; }
 	.sidebar { width:30%; }
- 
+  #botones{width: 10%;}
 	/* You can also tweak any other styles in a breakpoint */
 	H1 { color: blue; font-size:1.2em }
 }
@@ -95,6 +96,7 @@ a:link { color:purple; }
   .container {
     max-width: 400px;
   }
+  #botones{width: 10%;}
 
   /* Remove the padding we set earlier */
   .header,
