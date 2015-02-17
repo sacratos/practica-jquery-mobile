@@ -15,11 +15,20 @@
             
         </style>
         <script>
-        $("Document").ready(function({
-            $("#page2-3").on("click", function({
-                if
-            }));
-        }));</script>
+        $(document).ready(function() {
+                
+            $("#slider1").on("click",function(e){
+                //e.preventDefault();
+                $("#notafinal").css("background", "red");
+                var elemento1 = $("#slider1").val();
+                var elemento2 = $("#slider2").val();
+                var elemento3 = $("#slider3").val();
+                suma=parseInt(elemento1) + parseInt(elemento2) + parseInt(elemento3);
+                alert(suma);
+                $("#notafinal").val(elemento1 + elemento2 + elemento3);
+            });
+            
+        });</script>
     </head>
     <body>
  
@@ -54,62 +63,18 @@
  
         <!-- Página 2 FORMULARIO 1-->
         <div data-role="page" id="page2" data-add-back-btn=”true”>
-            <div data-role="header" class="ui-content">
+                <div data-role="header" class="ui-content">
                 <div id="botones">
+                    
                     <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline ui-disabled">Formulario 1</a>
                     <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="slide" class="ui-btn-inline">Formulario 2</a>
                     <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="slide" class="ui-btn-inline">Formulario 3</a>
                 </div>
-                
-            </div>
+                </div>
             <div data-role="content">
                 <form action="#" method="get">
-                    <h2>
-                        Formulario de anotaciones:
-                    </h2>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>
-                                Entrada del alumno:
-                            </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
-                            <label for="radio-choice-1">
-                                Puntual
-                            </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
-                            <label for="radio-choice-2">
-                                Retraso
-                            </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
-                            <label for="radio-choice-3">
-                                Falta 
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>
-                                Indumentaria:
-                            </legend>
-                            <input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" checked="true" />
-                            <label for="radio-choice-4">
-                                Ok
-                            </label>
-                            <input type="radio" name="radio-choice-2" id="radio-choice-5" value="choice-5" />
-                            <label for="radio-choice-5">
-                                Regular
-                            </label>
-                            <input type="radio" name="radio-choice-2" id="radio-choice-6" value="choice-6" />
-                            <label for="radio-choice-6">
-                                Mal
-                            </label>
-                        </fieldset>
-                    </div>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                 Introduccion/Idea proyecto:
-                            </legend>
                             <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
                             <label for="checkbox-6">
                                 Muy buena idea!
@@ -124,10 +89,14 @@
                             </label>
                             <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom"  />
                             <label for="checkbox-9">
+                                Explica mal
+                            </label>
+                            <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
+                            <label for="checkbox-10">
                                 Se entiende poco
                             </label>
-                              <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
-                            <label for="checkbox-10">
+                              <input type="checkbox" name="checkbox-11" id="checkbox-11" class="custom"  />
+                            <label for="checkbox-11">
                                 Nada claro
                             </label>
                         </fieldset>
@@ -157,7 +126,7 @@
                     </div>
                    
                     <div data-role="fieldcontain">
-                        <h1>Expresion Oral</h1>
+                        <h2>Expresion Oral</h2>
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <legend>
                                 Entonacion:
@@ -228,25 +197,55 @@
                             </legend>
                             <input type="radio" name="pausas" id="pausas1" value="off" />
                             <label for="pausas1">
-                                Demasiadas
+                                Muchas
                             </label>
                             <input type="radio" name="pausas" id="pausas2" value="off" />
                             <label for="pausas2">
                                 Bien
                             </label>
-                            <input type="radio" name="pausas" id="pausas3" value="on" checked="checked" />
+                            <input type="radio" name="pausas" id="pausas3" value="off" />
                             <label for="pausas3">
                                 Pocas
                             </label>
                         </fieldset>
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Muletillas:
+                            </legend>
+                            <input type="radio" name="muletillas" id="muletillas1" value="off" />
+                            <label for="muletillas1">
+                                Ninguna
+                            </label>
+                            <input type="radio" name="muletillas" id="muletillas2" value="off" />
+                            <label for="muletillas2">
+                                Pocas
+                            </label>
+                            <input type="radio" name="muletillas" id="muletillas3" value="off" />
+                            <label for="muletillas3">
+                                Muchas
+                            </label>
+                        </fieldset>
                     </div>
-
+                    </br>
+                    <div>
+                        <fieldset>
+                            <legend><strong>¿Responde de forma coherente?</strong></legend>
+                            <input type="radio" name="coherencia" id="coherencia1" value="si" />
+                            <label for="coherencia1">
+                                Si
+                            </label>
+                            <input type="radio" name="coherencia" id="coherencia2" value="no" />
+                            <label for="coherencia2">
+                                No
+                            </label>
+                        </fieldset>
+                    </div>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
                                 Nota general de exposicion:
                             </legend>
-                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                            <input type="range" name="slider-fill" id="slider-fill" value="5" min="0" max="10" step="0.1" data-highlight="true">
                         </fieldset>
                     </div>
 
@@ -254,7 +253,6 @@
                     
                     <a data-role="button" href="#page3" data-transition="slide">Siguiente</a>
                 </form>
-              </div>
             </div>
             <div data-role="footer">
                 <h4>
@@ -283,14 +281,18 @@
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
-                                Claridad de presentacion:
+                                Claridad:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
+                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" />
                             <label for="radio-choice-1">
                                 Habla con seguridad
                             </label>
                             <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
                             <label for="radio-choice-2">
+                                Se maneja bastante bien
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
+                            <label for="radio-choice-3">
                                 Tiene dudas, inseguridad
                             </label>
                             
@@ -301,7 +303,7 @@
                             <legend>
                                 Tipo de Presentacion:
                             </legend>
-                            <input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" checked="true" />
+                            <input type="radio" name="radio-choice-2" id="radio-choice-4" value="choice-4" />
                             <label for="radio-choice-4">
                                 PowerPoint, Prezy, otros...
                             </label>
@@ -311,7 +313,7 @@
                             </label>
                             <input type="radio" name="radio-choice-2" id="radio-choice-6" value="choice-6" />
                             <label for="radio-choice-6">
-                                Oral, proyector.
+                                Oral/Escrito.
                             </label>
                         </fieldset>
                     </div>
@@ -320,13 +322,21 @@
                             <legend>
                                 Redaccion y claridad de texto:
                             </legend>
-                            <input type="radio" name="radio-choice-3" id="radio-choice-7" value="choice-7" checked="true" />
-                            <label for="radio-choice-7">
+                            <input type="radio" name="contenido" id="contenido1" value="contenido" />
+                            <label for="contenido1">
                                 Bien redactado, completo
                             </label>
-                            <input type="radio" name="radio-choice-3" id="radio-choice-8" value="choice-8" />
-                            <label for="radio-choice-8">
-                                Se entiende mal, falta coherencia.
+                             <input type="radio" name="contenido" id="contenido2" value="contenido" />
+                            <label for="contenido2">
+                                Bien escrito, con algunas faltas
+                            </label>
+                            <input type="radio" name="contenido" id="contenido3" value="contenido" />
+                            <label for="contenido3">
+                                Cuesta entenderlo, falta coherencia.
+                            </label>
+                             <input type="radio" name="contenido" id="contenido4" value="contenido" />
+                            <label for="contenido4">
+                                Incompleto
                             </label>
                             
                         </fieldset>
@@ -336,15 +346,18 @@
                             <legend>
                                 Organizacion del contenido:
                             </legend>
-                            <input type="radio" name="radio-choice-4" id="radio-choice-9" value="choice-7" checked="true" />
-                            <label for="radio-choice-7">
-                                Bien redactado, completo
+                            <input type="radio" name="organizacion" id="organizacion1" value="organizacion" />
+                            <label for="organizacion1">
+                                Bien escrito, con algunas faltas
                             </label>
-                            <input type="radio" name="radio-choice-4" id="radio-choice-10" value="choice-8" />
-                            <label for="radio-choice-8">
-                                Se entiende mal, falta coherencia.
+                            <input type="radio" name="organizacion" id="organizacion2" value="organizacion" />
+                            <label for="organizacion2">
+                                Cuesta entenderlo, falta coherencia.
                             </label>
-                            
+                             <input type="radio" name="organizacion" id="organizacion3" value="organizacion" />
+                            <label for="organizacion3">
+                                Incompleto
+                            </label>
                         </fieldset>
                     </div>
                     
@@ -352,11 +365,7 @@
                 </form>
               </div>
             </div>
-            <div data-role="footer">
-                <h4>
-                    Calidad de Presentacion del Proyecto
-                </h4>
-            </div>
+            
         </div>
         <!-- Fin página 4 -->
 
@@ -381,18 +390,20 @@
                             <legend>
                                 Planteamiento:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
-                            <label for="radio-choice-1">
+                            <input type="checkbox" name="planteamiento" id="planteamiento1" value="planteamiento" />
+                            <label for="planteamiento1">
                                 Objetivos alcanzados
                             </label>
-                            <input type="radio" name="radio-choice-2" id="radio-choice-2" value="choice-2" />
-                            <label for="radio-choice-2">
-                                Retraso
+                            <input type="checkbox" name="planteamiento" id="planteamiento2" value="planteamiento" />
+                            <label for="planteamiento2">
+                                Recursos utilizados
                             </label>
-                            <input type="radio" name="radio-choice-3" id="radio-choice-3" value="choice-3" />
-                            <label for="radio-choice-3">
-                                Justificacion del proyecto
+                            <input type="checkbox" name="planteamiento" id="planteamiento3" value="planteamiento" />
+                            <label for="planteamiento3">
+                                Justifica el proyecto
                             </label>
+                            </br>
+                            <input type="text" name="destinatario" id="destinatario" value="destinatario" />
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -400,7 +411,7 @@
                             <legend>
                                 Indumentaria:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" />
                             <label for="radio-choice-4">
                                 Ok
                             </label>
@@ -474,7 +485,7 @@
                             <legend>
                                 Nota general de exposicion:
                             </legend>
-                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                            <input type="range" name="slider-fill" id="slider-fill" value="5" min="0" max="10" data-highlight="true">
                         </fieldset>
                     </div>
                     
@@ -482,11 +493,7 @@
                 </form>
               </div>
             </div>
-            <div data-role="footer">
-                <h4>
-                    Calificacion Oral de los alumnos
-                </h4>
-            </div>
+            
         </div>
         <!-- Fin página 5 -->
                     
@@ -507,7 +514,7 @@
                             <label>
                                 Nota sobre 6.5 pts, 65% de la nota
                             </label>
-                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="6.5" data-highlight="true">
+                            <input type="range" name="slide" id="slider1" step="0.1" min="0" max="6.5" data-highlight="true">
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -518,7 +525,7 @@
                             <label>
                                 Nota sobre 1 pt, 10% de la nota
                             </label>
-                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="1" data-highlight="true">
+                            <input type="range" name="slide" id="slider2" step="0.1" min="0" max="1" data-highlight="true">
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -529,19 +536,15 @@
                             <label for="radio-choice-a">
                                 Nota sobre 2.5 pts, 25% de la nota
                             </label>
-                            <input type="range" name="slider-fill" id="slider-fill" step="0.1" min="0" max="2.5" data-highlight="true">
+                            <input type="range" name="slide" id="slider3" step="0.1" min="0" max="2.5" data-highlight="true">
                         </fieldset>
                     </div>
-                    <input type="text" name="notafinal" value="">
+                    <input type="text" class="ui-disabled" name="notafinal" id="notafinal" value="">
                     <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
                 </form>
               </div>
             </div>
-            <div data-role="footer">
-                <h4>
-                    Calificacion Oral de los alumnos
-                </h4>
-            </div>
+            
         </div>
         <!-- Fin página NOTAS -->
 
