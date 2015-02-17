@@ -2,9 +2,15 @@
 /* Global typography and design elements, stacked containers */
 body { font-family: Helvetica, san-serif; padding-top: 20px;
   padding-bottom: 20px;}
-H1 { color: green; }
+h1 { color: green; }
 a:link { color:purple; }
- 
+#botones{
+  display: inline-block;
+  color: green;
+  text-align: center;
+  position: relative;
+  
+}
 /* Stack the two content containers */
 .main,
 .sidebar { display:block; width:100%; }
@@ -85,9 +91,9 @@ a:link { color:purple; }
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 400px) {
   .container {
-    max-width: 730px;
+    max-width: 400px;
   }
 
   /* Remove the padding we set earlier */

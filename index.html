@@ -14,6 +14,12 @@
 }
             
         </style>
+        <script>
+        $("Document").ready(function({
+            $("#page2-3").on("click", function({
+                if
+            }));
+        }));</script>
     </head>
     <body>
  
@@ -37,6 +43,7 @@
                 </form>
                 
             </div>
+
             <div data-role="footer">
                 <h4>
                     una aplicacion para los profesores del CPIFP Los Enlaces
@@ -47,10 +54,13 @@
  
         <!-- Página 2-->
         <div data-role="page" id="page2" data-add-back-btn=”true”>
-            <div data-role="header">
-                <h1>
-
-                </h1>
+            <div data-role="header" class="ui-content">
+                <div id="botones">
+                    <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 1</a>
+                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 2</a>
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 3</a>
+                </div>
+                
             </div>
             <div data-role="content">
                 <form action="#" method="get">
@@ -62,7 +72,7 @@
                             <legend>
                                 Entrada del alumno:
                             </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
                             <label for="radio-choice-1">
                                 Puntual
                             </label>
@@ -79,77 +89,110 @@
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <legend>
-                                    Indumentaria:
-                            </legend>   
-                            <input type="checkbox" name="checkbox-1b" id="checkbox-1b" class="custom" />
-                            <label for="checkbox-1b">
-                                OK
+                                Indumentaria:
+                            </legend>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <label for="radio-choice-4">
+                                Ok
                             </label>
-                            <input type="checkbox" name="checkbox-2b" id="checkbox-2b" class="custom" />
-                            <label for="checkbox-2b">
-                                Observaciones
-                            </label> 
-                            <input type="textarea" name="obs">                
+                            <input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5" />
+                            <label for="radio-choice-5">
+                                Regular
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-6" value="choice-6" />
+                            <label for="radio-choice-6">
+                                Mal
+                            </label>
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                 Introduccion/Idea proyecto:
+                            </legend>
+                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+                            <label for="checkbox-6">
+                                Muy buena idea!
+                            </label>
+                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+                            <label for="checkbox-7">
+                                Atractivo
+                            </label>
+                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
+                            <label for="checkbox-8">
+                                Claro y conciso
+                            </label>
+                            <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom"  />
+                            <label for="checkbox-9">
+                                Se entiende poco
+                            </label>
+                              <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
+                            <label for="checkbox-10">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+                   <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Desarrollo del proyecto:
+                            </legend>
+                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
+                            <label for="radio-choice-a">
+                                Claridad de los objetivos
+                            </label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="off" />
+                            <label for="radio-choice-b">
+                                Exposicion emocionante
+                            </label>
+                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
+                            <label for="radio-choice-c">
+                                Exposicion muy densa
+                            </label>
+                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
+                            <label for="radio-choice-d">
+                                Poco trabajado
+                            </label>
+                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
+                            <label for="radio-choice-e">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Nota general de exposicion:
+                            </legend>
+                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                        </fieldset>
+                    </div>
+
+                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <legend>
                                 Introduccion/Idea proyecto:
                             </legend>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
-                            <label for="radio-choice-c">
+                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
+                            <label for="radio-choice-a">
+                                Muy buena idea!
+                            </label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="on" checked="checked" />
+                            <label for="radio-choice-b">
                                 Atractivo
                             </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
-                            <label for="radio-choice-d">
+                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
+                            <label for="radio-choice-c">
                                 Claro y conciso
                             </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-e" value="other"/>
+                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
+                            <label for="radio-choice-d">
+                                Se entiende poco
+                            </label>
+                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
                             <label for="radio-choice-e">
-                                Tarjeta crédito
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>
-                                Elige los ingredientes de la pizza:
-                            </legend>
-                            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
-                            <label for="checkbox-1a">
-                                Champiñones
-                            </label>
-                            <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
-                            <label for="checkbox-2a">
-                                Aceitunas negras
-                            </label>
-                            <input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
-                            <label for="checkbox-3a">
-                                Pimientos
-                            </label>
-                            <input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
-                            <label for="checkbox-4a">
-                                Cebolla
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                Ingredientes para no vegetarianos:
-                            </legend>
-                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
-                            <label for="checkbox-6">
-                                Chorizo
-                            </label>
-                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
-                            <label for="checkbox-7">
-                                Jamón Serrano
-                            </label>
-                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
-                            <label for="checkbox-8">
-                                Carne picada
+                                Nada claro
                             </label>
                         </fieldset>
                     </div>
@@ -160,14 +203,298 @@
             </div>
             <div data-role="footer">
                 <h4>
-                    Notas
+                    Expresion Oral
                 </h4>
             </div>
         </div>
         <!-- Fin página 2 -->
-                    <script>
-                    $("#select-choice-2").val("");
-                    </script>
+
+        <!-- Página 4-->
+        <div data-role="page" id="page3" data-add-back-btn=”true”>
+            <div data-role="header" class="ui-content">
+                <div id="botones">
+                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 2</a>
+                    <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 1</a>
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 3</a>
+                </div>
+                
+            </div>
+            <div data-role="content">
+                <form action="#" method="get">
+                    <h2>
+                        Formulario de anotaciones:
+                    </h2>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Entrada del alumno:
+                            </legend>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
+                            <label for="radio-choice-1">
+                                Puntual
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
+                            <label for="radio-choice-2">
+                                Retraso
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
+                            <label for="radio-choice-3">
+                                Falta 
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Indumentaria:
+                            </legend>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <label for="radio-choice-4">
+                                Ok
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5" />
+                            <label for="radio-choice-5">
+                                Regular
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-6" value="choice-6" />
+                            <label for="radio-choice-6">
+                                Mal
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                 Introduccion/Idea proyecto:
+                            </legend>
+                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+                            <label for="checkbox-6">
+                                Muy buena idea!
+                            </label>
+                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+                            <label for="checkbox-7">
+                                Atractivo
+                            </label>
+                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
+                            <label for="checkbox-8">
+                                Claro y conciso
+                            </label>
+                            <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom"  />
+                            <label for="checkbox-9">
+                                Se entiende poco
+                            </label>
+                              <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
+                            <label for="checkbox-10">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+                   <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Desarrollo del proyecto:
+                            </legend>
+                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
+                            <label for="radio-choice-a">
+                                Claridad de los objetivos
+                            </label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="off" />
+                            <label for="radio-choice-b">
+                                Exposicion emocionante
+                            </label>
+                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
+                            <label for="radio-choice-c">
+                                Exposicion muy densa
+                            </label>
+                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
+                            <label for="radio-choice-d">
+                                Poco trabajado
+                            </label>
+                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
+                            <label for="radio-choice-e">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Nota general de exposicion:
+                            </legend>
+                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                        </fieldset>
+                    </div>
+
+                     <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Introduccion/Idea proyecto:
+                            </legend>
+                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
+                            <label for="radio-choice-a">
+                                Muy buena idea!
+                            </label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="on" checked="checked" />
+                            <label for="radio-choice-b">
+                                Atractivo
+                            </label>
+                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
+                            <label for="radio-choice-c">
+                                Claro y conciso
+                            </label>
+                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
+                            <label for="radio-choice-d">
+                                Se entiende poco
+                            </label>
+                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
+                            <label for="radio-choice-e">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+                    
+                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                </form>
+              </div>
+            </div>
+            <div data-role="footer">
+                <h4>
+                    Calidad de Presentacion del Proyecto
+                </h4>
+            </div>
+        </div>
+        <!-- Fin página 4 -->
+
+        <!-- Página 5-->
+        <div data-role="page" id="page4" data-add-back-btn=”true”>
+            <div data-role="header" class="ui-content">
+                <div id="botones">
+                    <a id="pagina3" href="#page4" data-role="button" data-mini="true" data-transition="pop" class="ui-disabled">Formulario 3</a>
+                    <a id="pagina1" href="#page2" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 1</a>
+                    <a id="pagina2" href="#page3" data-role="button" data-mini="true" data-transition="pop" class="ui-btn-inline">Formulario 2</a>
+                </div>
+                
+            </div>
+            <div data-role="content">
+                <form action="#" method="get">
+                    <h2>
+                        Contenido del Proyecto:
+                    </h2>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Planteamiento:
+                            </legend>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="true" />
+                            <label for="radio-choice-1">
+                                Puntual
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
+                            <label for="radio-choice-2">
+                                Retraso
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
+                            <label for="radio-choice-3">
+                                Falta 
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Indumentaria:
+                            </legend>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4" checked="true" />
+                            <label for="radio-choice-4">
+                                Ok
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5" />
+                            <label for="radio-choice-5">
+                                Regular
+                            </label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-6" value="choice-6" />
+                            <label for="radio-choice-6">
+                                Mal
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                 Introduccion/Idea proyecto:
+                            </legend>
+                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+                            <label for="checkbox-6">
+                                Muy buena idea!
+                            </label>
+                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+                            <label for="checkbox-7">
+                                Atractivo
+                            </label>
+                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
+                            <label for="checkbox-8">
+                                Claro y conciso
+                            </label>
+                            <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom"  />
+                            <label for="checkbox-9">
+                                Se entiende poco
+                            </label>
+                              <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom"  />
+                            <label for="checkbox-10">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+                   <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Desarrollo del proyecto:
+                            </legend>
+                            <input type="radio" name="radio-choice-a" id="radio-choice-a" value="off" />
+                            <label for="radio-choice-a">
+                                Claridad de los objetivos
+                            </label>
+                            <input type="radio" name="radio-choice-b" id="radio-choice-b" value="off" />
+                            <label for="radio-choice-b">
+                                Exposicion emocionante
+                            </label>
+                            <input type="radio" name="radio-choice-c" id="radio-choice-c" value="off" />
+                            <label for="radio-choice-c">
+                                Exposicion muy densa
+                            </label>
+                            <input type="radio" name="radio-choice-d" id="radio-choice-d" value="other"/>
+                            <label for="radio-choice-d">
+                                Poco trabajado
+                            </label>
+                            <input type="radio" name="radio-choice-e" id="radio-choice-e" value="off" />
+                            <label for="radio-choice-e">
+                                Nada claro
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <legend>
+                                Nota general de exposicion:
+                            </legend>
+                            <input type="range" name="slider-fill" id="slider-fill" value="6" min="0" max="10" data-highlight="true">
+                        </fieldset>
+                    </div>
+                    
+                    <a data-role="button" href="#dialog1" data-rel="dialog" data-transition="pop">Listo!</a>
+                </form>
+              </div>
+            </div>
+            <div data-role="footer">
+                <h4>
+                    Calificacion Oral de los alumnos
+                </h4>
+            </div>
+        </div>
+        <!-- Fin página 5 -->
+                    
  
         <!-- Página 3 -->
         <div data-role="page" id="dialog1">
@@ -221,7 +548,7 @@
             </div>
             <div data-role="footer">
                 <h4>
-                    alumno y curso
+                    Alumnos CPIFP Los Enlaces
                 </h4>
             </div>
         </div>
